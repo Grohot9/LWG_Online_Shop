@@ -4,6 +4,9 @@ on:
   - push
   - pull_request
 
+env:
+  DJANGO-SETTINGS-MODULE: config.settings.dev
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
