@@ -62,7 +62,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
-        "account.User", on_delete=models.CASCADE, related_name="profile"
+        User, on_delete=models.CASCADE, related_name="profile"
     )
     role = models.ForeignKey(
         "account.Role", on_delete=models.CASCADE, related_name="users"
