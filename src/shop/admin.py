@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from shop.models import Cart, CartItem, Category, Product
+
+admin.site.register([Product, Category, Cart, CartItem])
